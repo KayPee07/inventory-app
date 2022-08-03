@@ -1,0 +1,14 @@
+<%- include("header", {title: title}) %> 
+
+<h1><%- title %> </h1>
+<hr>
+
+<% if (category_list) { %> <%
+category_list.forEach(category => { %>
+<div class="my-4">
+  <a <%- `href="/category/${category._id}" ` %>
+    >
+    <h2 class="my-1"><%- category.name %></h2></a
+  >
+</div>
+<% }) %> <% } %> <%- include("footer") %>
